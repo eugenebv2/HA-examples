@@ -1,18 +1,3 @@
 # HA-examples
 
-ExecStart=/home/pi/wyoming-satellite/script/run \ 
-  --name 'Pi Satellite' \ 
-  --uri 'tcp://0.0.0.0:10700' \ 
-  --mic-command 'arecord -D plughw:CARD=seeed2micvoicec,DEV=0 -r 22050 -c 1 -f S16_LE -t raw' \ 
-  --snd-command 'aplay -D plughw:CARD=seeed2micvoicec,DEV=0 -r 22050 -c 1 -f S16_LE -t raw' \ 
-  --snd-volume-multiplier 0.35 \ 
-  --mic-auto-gain 5 \ 
-  --mic-noise-suppression 1 \ 
-  --mic-seconds-to-mute-after-awake-wav 0\ 
-  --wake-refractory-seconds 3 \ 
-  --awake-wav 'sounds/awake.wav' \
-  --timer-finished-wav 'sounds/timer_finished.wav' \ 
-  --timer-finished-wav-repeat 3 3 \
-  --wake-uri 'tcp://127.0.0.1:10400' \ 
-  --wake-word-name 'ok_nabu' \ 
-  --event-uri ‘tcp://127.0.0.1:10500’
+Example configuration files for home assistant.
